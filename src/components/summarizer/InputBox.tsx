@@ -1,17 +1,14 @@
 "use client";
 
-import React, { useEffect, useState } from 'react'
-import { Textarea } from '../ui/textarea'
-import { useInput, useInputWordCountStore, useLoading, useTextLength } from '@/store';
-import { toast } from 'sonner';
 import { getText } from '@/actions';
-import { useUser } from '@clerk/nextjs';
+import { useInput, useInputWordCountStore, useLoading, useTextLength } from '@/store';
+import { useUser } from '@clerk/clerk-react';
+import React, { useEffect } from 'react';
+import { toast } from 'sonner';
+import { Textarea } from '../ui/textarea';
 
-interface Props {
 
-}
-
-const InputBox: React.FC<Props> = () => {
+const InputBox = () => {
 
     const { user } = useUser();
 

@@ -1,23 +1,17 @@
 "use client";
 
-import { useInput, useOutput, useTextLength, useInputWordCountStore, useOutputWordCountStore, useSentenceCount, useLoading, useError } from '@/store';
-import React, { useCallback, useEffect, useState } from 'react'
-import { Button } from '../ui/button';
-import { Copy, Download, Loader2, MoreVertical, UploadCloud } from 'lucide-react';
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip"
-import axios from 'axios';
 import { getText } from '@/actions';
-import { toast } from 'sonner';
-import Link from 'next/link';
-import { SignUpButton, useUser } from '@clerk/nextjs';
-import saveAs from "file-saver";
-import { useMediaQuery } from 'usehooks-ts';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from '@/lib/utils';
+import { useError, useInput, useInputWordCountStore, useLoading, useOutputWordCountStore, useSentenceCount, useTextLength } from '@/store';
+import { SignUpButton, useUser } from '@clerk/clerk-react';
+import saveAs from "file-saver";
+import { Copy, Download, Loader2 } from 'lucide-react';
+import Link from 'next/link';
+import React, { useCallback, useEffect } from 'react';
+import { toast } from 'sonner';
+import { useMediaQuery } from 'usehooks-ts';
+import { Button } from '../ui/button';
 
 interface Props {
 }

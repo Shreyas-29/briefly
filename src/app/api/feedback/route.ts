@@ -1,6 +1,4 @@
-import { auth, currentUser } from '@clerk/nextjs';
-import axios from 'axios';
-import { NextApiRequest, NextApiResponse } from 'next';
+import { currentUser } from '@clerk/nextjs';
 import nodemailer from 'nodemailer';
 
 export async function POST(req: Request, res: Response) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { ClerkProvider, useAuth } from "@clerk/clerk-react";
+import { ClerkProvider } from "@clerk/clerk-react";
 import React from "react";
 
 const ClerkClientProvider = ({ children }: { children: React.ReactNode }) => {

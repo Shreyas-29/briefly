@@ -2,12 +2,12 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Skeleton } from '@/components/ui/skeleton';
-import { useUser } from '@clerk/nextjs'
+import { useUser } from '@clerk/clerk-react'
 import React from 'react'
 
 const Account = () => {
 
-    const { user, isLoaded } = useUser();
+    const { user } = useUser();
 
     const provider = user?.primaryEmailAddress?.verification.strategy;
 

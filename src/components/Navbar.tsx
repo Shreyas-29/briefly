@@ -1,22 +1,15 @@
 "use client";
 
-import { SignInButton, SignOutButton, useUser } from '@clerk/nextjs';
-import { CircleUserRound, FileSearch, Gem, Languages, LayoutGrid, Menu, Text } from 'lucide-react';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { SignInButton, useUser } from '@clerk/clerk-react';
+import { FileSearch, Gem, Languages, LayoutGrid, Menu, Text } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { toast } from 'sonner';
 import { MobileSidebar, ThemeToggle, UserAccount } from '.';
 import { Button } from './ui/button';
 import { Skeleton } from './ui/skeleton';
-import Link from 'next/link';
-import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-} from "@/components/ui/sheet"
-import { usePathname } from 'next/navigation';
-import { toast } from 'sonner';
 
 
 

@@ -12,8 +12,6 @@ const getText = async (text: string, length: number) => {
 
         const output = await pipeline.run(text);
 
-        console.log("output: ", output);
-
         if (output && output.summary && output.summary.text) {
             return output.summary.text as string;
         } else {
