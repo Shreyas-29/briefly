@@ -199,7 +199,7 @@ const TopBar: React.FC<Props> = () => {
                                             Are you sure?
                                         </AlertDialogTitle>
                                         <AlertDialogDescription>
-                                            This action cannot be undone. This will delete all generated symmary text.
+                                            This action cannot be undone. This will delete all generated summary text.
                                         </AlertDialogDescription>
                                     </AlertDialogHeader>
                                     <AlertDialogFooter>
@@ -262,8 +262,8 @@ const TopBar: React.FC<Props> = () => {
                         </Dialog>
                     </div>
                 </div>
-            </TooltipProvider >
-        </div >
+            </TooltipProvider>
+        </div>
     )
 }
 

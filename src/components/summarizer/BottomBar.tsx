@@ -65,7 +65,7 @@ const BottomBar: React.FC<Props> = ({ }) => {
         } finally {
             setLoading(false);
         }
-    }, [inputText, user, wordCount, textLength, setLoading, setSummarizedText, getText]);
+    }, [inputText, user, wordCount, textLength, setLoading, setSummarizedText]);
 
 
 

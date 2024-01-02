@@ -1,0 +1,10 @@
+{
+    "name": "Briefly",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_title": "Briefly",
+        "default_icon": "icon.svg",
+        "default_popup": "index.html"
+    }
+}

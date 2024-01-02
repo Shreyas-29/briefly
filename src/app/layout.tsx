@@ -36,12 +36,12 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" suppressHydrationWarning>
-            <body className={cn(
-                "font-base antialiased bg-secondary/50 min-h-screen",
-                font.className
-            )}>
-                <ClerkClientProvider>
+        <ClerkClientProvider>
+            <html lang="en" suppressHydrationWarning>
+                <body className={cn(
+                    "font-base antialiased bg-secondary/50 min-h-screen",
+                    font.className
+                )}>
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="system"
@@ -52,8 +52,8 @@ export default function RootLayout({
                         <Navbar />
                         {children}
                     </ThemeProvider>
-                </ClerkClientProvider>
-            </body>
-        </html>
+                </body>
+            </html>
+        </ClerkClientProvider>
     )
 }

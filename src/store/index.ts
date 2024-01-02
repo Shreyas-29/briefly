@@ -7,6 +7,14 @@ import useSentenceCount from "./sentenceCount";
 import useLoading from "./loading";
 import useError from "./error";
 
+import useInputText from "./translator/inputText";
+import useOutputText from "./translator/outputText";
+import useInputLang from "./translator/inputLang";
+import useOutputLang from "./translator/outputLang";
+import useIsLoading from "./translator/loading";
+import useTransInputWordCount from "./translator/transInputWordCount";
+import useTransOutputWordCount from "./translator/transOutputWordCount";
+
 export {
     useInputWordCountStore,
     useOutputWordCountStore,
@@ -15,5 +23,12 @@ export {
     useTextLength,
     useSentenceCount,
     useLoading,
-    useError
+    useError,
+    useInputText,
+    useOutputText,
+    useInputLang,
+    useOutputLang,
+    useIsLoading,
+    useTransInputWordCount,
+    useTransOutputWordCount,
 }
