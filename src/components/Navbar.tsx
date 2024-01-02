@@ -50,7 +50,7 @@ const Navbar = () => {
                                     <SheetTitle>Tools</SheetTitle>
                                 </SheetHeader>
                                 <div className="flex flex-col items-start w-full mt-8 gap-y-2">
-                                    <Button variant={activePath === "/" ? "default" : "ghost"} asChild className="justify-start w-full">
+                                    <Button variant={activePath === "/" ? "default" : "ghost"} onClick={() => handleLink(false)} asChild className="justify-start w-full">
                                         <Link href="/" className="flex items-center justify-start w-full gap-x-2">
                                             <Text className="w-5 h-5" />
                                             Summarizer
@@ -60,7 +60,7 @@ const Navbar = () => {
                                         <FileSearch className="w-5 h-5" />
                                         Palgrism Checker
                                     </Button>
-                                    <Button variant="ghost" onClick={() => handleLink(false)} className="justify-start w-full gap-x-2">
+                                    <Button variant={activePath === "/translator" ? "default" : "ghost"} onClick={() => handleLink(false)} className="justify-start w-full gap-x-2">
                                         <Link href="/translator" className="flex items-center justify-start w-full gap-x-2">
                                             <Languages className="w-5 h-5" />
                                             Translator
