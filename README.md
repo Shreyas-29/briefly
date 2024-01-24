@@ -35,11 +35,12 @@ Briefly is a web app that provides text summarization and translation services. 
 ## Screenshots
 
 <div align="center">
-  <img src="https://github.com/Shreyas-29/briefly/assets/111555846/c83d4d30-23bc-4129-87c6-84bcee80541a" alt="Screenshot 1" width="500"/>
-  <img src="https://github.com/Shreyas-29/briefly/assets/111555846/2861272b-b5a0-40a3-84fa-46e9d01f5884" alt="Screenshot 2" width="500"/>
+  <img src="https://github.com/Shreyas-29/briefly/assets/111555846/07111893-599f-494d-b0b9-d79d4a0d650d" alt="Screenshot 1" width="100%"/>
+  <img src="https://github.com/Shreyas-29/briefly/assets/111555846/2861272b-b5a0-40a3-84fa-46e9d01f5884" alt="Screenshot 2" width="100%"/>
 </div>
 
 ## Getting Started
+
 
 Follow these steps to get Briefly up and running on your local machine.
 
