@@ -19,14 +19,14 @@ export async function POST(req: Request, res: Response) {
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: "sihasaneshreyas@gmail.com",
-                pass: "pkbxndjxukmuzfxi",
+                user: "sihasaneshreyas@gmail.com", // Enter here email address from which you want to send emails
+                pass: process.env.NODEMAILER_PASSWORD, // Enter here password for email account from which you want to send emails
             },
         });
 
         const mailOptions = {
             from: email,
-            to: "sihasaneshreyas@gmail.com",
+            to: "sihasaneshreyas@gmail.com", // Enter here email address on which you want to send emails
             subject: `Feedback from ${email} by ${user?.firstName}`,
             text: text,
         };
