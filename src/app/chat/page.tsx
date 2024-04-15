@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 import React from 'react';
-import Container from './_components/Container';
+import Container from "./_components/Container";
 
 export const metadata: Metadata = {
-    title: "Translator",
+    title: "Chat",
 };
 
-const TranslatorPage = () => {
+const ChatPage = () => {
     return (
         <div className="flex items-center justify-center w-full max-h-[80%] h-full mx-auto mt-12 max-w-7xl px-4 md:px-8">
             <Container />
@@ -14,4 +14,4 @@ const TranslatorPage = () => {
     )
 };
 
-export default TranslatorPage;
+export default ChatPage;

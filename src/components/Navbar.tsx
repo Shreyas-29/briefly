@@ -1,16 +1,22 @@
 "use client";
 
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+    Sheet,
+    SheetContent,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger
+} from "@/components/ui/sheet";
 import { SignInButton, useUser } from '@clerk/clerk-react';
-import { FileSearch, Gem, Languages, LayoutGrid, Menu, Text } from 'lucide-react';
+import { AudioLines, FileSearch, Gem, Languages, Menu, MessageSquareText, SpellCheck, Text } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from "react";
 import { toast } from 'sonner';
 import { MobileSidebar, ThemeToggle, UserAccount } from '.';
 import { Button } from './ui/button';
 import { Skeleton } from './ui/skeleton';
-import { useState } from "react";
 
 // 2829c32005bc42c5a5c47538382dd14b
 
@@ -66,12 +72,30 @@ const Navbar = () => {
                                             Translator
                                         </Link>
                                     </Button>
-                                    <Button variant="ghost" onClick={() => handleLink(true)} className="justify-start w-full gap-x-2">
+                                    <Button variant={activePath === "/grammar-check" ? "default" : "ghost"} onClick={() => handleLink(false)} className="justify-start w-full gap-x-2">
+                                        <Link href="/grammar-check" className="flex items-center justify-start w-full gap-x-2">
+                                            <SpellCheck className="w-5 h-5" />
+                                            Grammar Check
+                                        </Link>
+                                    </Button>
+                                    <Button variant={activePath === "/chat" ? "default" : "ghost"} onClick={() => handleLink(false)} className="justify-start w-full gap-x-2">
+                                        <Link href="/chat" className="flex items-center justify-start w-full gap-x-2">
+                                            <MessageSquareText className="w-5 h-5" />
+                                            Chat with AI
+                                        </Link>
+                                    </Button>
+                                    <Button variant={activePath === "/audio-generator" ? "default" : "ghost"} onClick={() => handleLink(false)} className="justify-start w-full gap-x-2">
+                                        <Link href="/audio-generator" className="flex items-center justify-start w-full gap-x-2">
+                                            <AudioLines className="w-5 h-5" />
+                                            Audio Generator
+                                        </Link>
+                                    </Button>
+                                    {/* <Button variant="ghost" onClick={() => handleLink(true)} className="justify-start w-full gap-x-2">
                                         <LayoutGrid className="w-5 h-5" />
                                         Apps & Extensions
-                                    </Button>
+                                    </Button> */}
                                     <div className="w-full h-px bg-border" />
-                                    <Button variant={activePath === "/premium" ? "default" : "ghost"} asChild className="justify-start w-full">
+                                    <Button variant={activePath === "/premium" ? "default" : "ghost"} asChild className="justify-start w-full" onClick={() => handleLink(false)}>
                                         <Link href="/premium" className="flex items-center justify-start w-full gap-x-2">
                                             <Gem className="w-5 h-5" />
                                             Briefly Premium
@@ -89,7 +113,7 @@ const Navbar = () => {
 
                 <div className="absolute top-0 z-0 flex items-center justify-center py-3.5 mx-auto -translate-x-1/2 left-1/2">
                     <span className="text-sm font-semibold text-center capitalize md:text-xl">
-                        {pathname === "/" ? "Summarizer" : pathname === "/translator" ? "Translator" : pathname === "/premium" ? "Briefly Premium" : "Briefly"}
+                        {pathname === "/" ? "Summarizer" : pathname === "/translator" ? "Translator" : pathname === "/premium" ? "Briefly Premium" : pathname === "/chat" ? "AI Chat" : pathname === "/grammar-check" ? "Grammar Check" : pathname === "/audio-generator" ? "Audio Generator" : "Briefly"}
                     </span>
                 </div>
 

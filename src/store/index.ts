@@ -15,6 +15,12 @@ import useIsLoading from "./translator/loading";
 import useTransInputWordCount from "./translator/transInputWordCount";
 import useTransOutputWordCount from "./translator/transOutputWordCount";
 
+import useAudioBlob from "./audio-generator/audio";
+import useAudioIsLoading from "./audio-generator/loading";
+import useAudioInputText from "./audio-generator/input";
+import useAudioURL from "./audio-generator/output";
+import usePlaying from "./audio-generator/play";
+
 export {
     useInputWordCountStore,
     useOutputWordCountStore,
@@ -31,4 +37,9 @@ export {
     useIsLoading,
     useTransInputWordCount,
     useTransOutputWordCount,
+    useAudioBlob,
+    useAudioIsLoading,
+    useAudioInputText,
+    useAudioURL,
+    usePlaying,
 }

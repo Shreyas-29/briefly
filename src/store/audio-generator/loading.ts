@@ -5,9 +5,9 @@ interface LoadingState {
     setLoading: (loading: boolean) => void;
 }
 
-const useIsLoading = create<LoadingState>((set) => ({
+const useAudioIsLoading = create<LoadingState>((set) => ({
     loading: false,
     setLoading: (loading) => set({ loading }),
 }));
 
-export default useIsLoading;
+export default useAudioIsLoading;

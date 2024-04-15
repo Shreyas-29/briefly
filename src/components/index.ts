@@ -3,6 +3,7 @@ import ThemeToggle from "./ThemeToggle";
 import Container from "./Container";
 import UserAccount from "./UserAccount";
 import MobileSidebar from "./MobileSidebar";
+import FeedbackModal from "./FeedbackModal";
 
 import { ThemeProvider } from "./providers/ThemeProvider";
 import ClerkClientProvider from "./providers/ClerkProvider";
@@ -23,5 +24,6 @@ export {
     BottomBar,
     ClerkClientProvider,
     UserAccount,
-    MobileSidebar
+    MobileSidebar,
+    FeedbackModal,
 }

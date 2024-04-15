@@ -3,8 +3,8 @@
 import { Button } from '@/components/ui/button';
 import { plans } from '@/lib/plans';
 import { cn } from '@/lib/utils';
-import { CheckCircle } from 'lucide-react';
-import React, { useState } from 'react'
+import { Zap } from 'lucide-react';
+import { useState } from 'react';
 import { toast } from 'sonner';
 
 type Plan = "monthly" | "annually";
@@ -47,9 +47,9 @@ const Cards = () => {
                     </span>
                 </div>
                 {/* Plan table */}
-                <div className="flex flex-col items-center justify-center mt-12 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
+                <div className="grid max-w-3xl grid-cols-1 mx-auto mt-12 space-y-8 md:grid-cols-2 lg:items-center lg:space-x-8 lg:space-y-0">
                     {plans.map((plan) => (
-                        <div key={plan.name} className="flex flex-col w-full max-w-sm p-8 space-y-4 border shadow-lg md:p-10 border-border bg-background rounded-2xl shadow-zinc-400/10">
+                        <div key={plan.name} className="flex flex-col w-full p-8 space-y-4 border md:max-w-sm md:p-10 border-border bg-background rounded-2xl">
                             <div className="flex-shrink-0">
                                 <span className={cn(
                                     "text-4xl font-semibold tracking-tight",
@@ -63,7 +63,7 @@ const Cards = () => {
                                 <h2 className="text-2xl font-medium">
                                     {plan.name}
                                 </h2>
-                                <p className="text-sm text-gray-400">
+                                <p className="text-sm text-neutral-400">
                                     {plan.description}
                                 </p>
                             </div>
@@ -72,7 +72,7 @@ const Cards = () => {
                             <ul className='flex-1 space-y-4'>
                                 {plan.features.map((feature, index) => (
                                     <li key={index} className="flex items-center justify-start text-sm">
-                                        <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
+                                        <Zap className="w-4 h-4 mr-2 text-primary/60" />
                                         {feature}
                                     </li>
                                 ))}
@@ -81,7 +81,7 @@ const Cards = () => {
                             {/* Button */}
                             <div className="flex-shrink-0 pt-4">
                                 <Button className="w-full" onClick={handlePlan}>
-                                    Get {plan.name}
+                                    {plan.name === "Standard" ? "Upgrade to Standard" : "Upgrade to Premium"}
                                 </Button>
                             </div>
                         </div>

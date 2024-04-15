@@ -1,7 +1,12 @@
 "use client";
 
 import { getText } from '@/actions';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger
+} from "@/components/ui/tooltip";
 import { cn } from '@/lib/utils';
 import { useError, useInput, useInputWordCountStore, useLoading, useOutputWordCountStore, useSentenceCount, useTextLength } from '@/store';
 import { SignUpButton, useUser } from '@clerk/clerk-react';
@@ -13,10 +18,7 @@ import { toast } from 'sonner';
 import { useMediaQuery } from 'usehooks-ts';
 import { Button } from '../ui/button';
 
-interface Props {
-}
-
-const BottomBar: React.FC<Props> = ({ }) => {
+const BottomBar = ({ }) => {
 
     const { user } = useUser();
 
@@ -67,16 +69,6 @@ const BottomBar: React.FC<Props> = ({ }) => {
         }
     }, [inputText, user, wordCount, textLength, setLoading, setSummarizedText]);
 
-
-
-    // const handleCopyText = async () => {
-    //     try {
-    //         await navigator.clipboard.writeText(summarizedText);
-    //         toast.success('Text copied to clipboard');
-    //     } catch (error) {
-    //         toast.error('Failed to copy text to clipboard');
-    //     }
-    // };
     const handleCopyText = async () => {
         try {
             const textArea = document.createElement('textarea');

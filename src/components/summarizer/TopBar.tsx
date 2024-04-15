@@ -1,30 +1,5 @@
 "use client";
 
-import React, { useState } from 'react'
-import { Button } from '../ui/button'
-import { HelpCircle, Loader2, MessageSquareText, Trash, Trash2 } from 'lucide-react'
-import { Slider } from "@/components/ui/slider"
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { useInput, useLoading, useTextLength } from '@/store';
-import {
-    Dialog,
-    DialogClose,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
-import { Textarea } from '../ui/textarea';
-import axios from 'axios';
-import { toast } from 'sonner';
-import { useMediaQuery } from 'usehooks-ts';
 import {
     AlertDialog,
     AlertDialogAction,
@@ -35,7 +10,31 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
     AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+} from "@/components/ui/alert-dialog";
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { useInput, useLoading, useTextLength } from '@/store';
+import axios from 'axios';
+import { HelpCircle, Loader2, MessageSquareText, Trash2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { toast } from 'sonner';
+import { useMediaQuery } from 'usehooks-ts';
+import { Button } from '../ui/button';
+import { Textarea } from '../ui/textarea';
 
 
 interface Props {

@@ -50,11 +50,12 @@
 }
 
 * {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 col {
   color: #17171c;
+  color: hsl(240 5.9% 10%);
 }
 
 ::-webkit-scrollbar {
@@ -66,7 +67,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 img,
@@ -113,4 +114,100 @@ input[type="range"]::-webkit-slider-runnable-track {
     width: 80px;
     height: 12px;
   }
+}
+
+/* Loader */
+.apple-loading {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.apple-loading .segment {
+  position: absolute;
+  left: 22px;
+  height: 7px;
+  width: 2px;
+  background-color: rgba(234, 234, 234, 0.8);
+  border-radius: 10px;
+  transform-origin: 1px 180%;
+  animation-duration: 1200ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: throbber;
+}
+
+/* Segment Styles */
+.apple-loading .segment:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: 0ms;
+}
+
+.apple-loading .segment:nth-child(2) {
+  transform: rotate(36deg);
+  animation-delay: 125ms;
+}
+
+.apple-loading .segment:nth-child(3) {
+  transform: rotate(72deg);
+  animation-delay: 250ms;
+}
+
+.apple-loading .segment:nth-child(4) {
+  transform: rotate(108deg);
+  animation-delay: 375ms;
+}
+
+.apple-loading .segment:nth-child(5) {
+  transform: rotate(144deg);
+  animation-delay: 500ms;
+}
+
+.apple-loading .segment:nth-child(6) {
+  transform: rotate(180deg);
+  animation-delay: 625ms;
+}
+
+.apple-loading .segment:nth-child(7) {
+  transform: rotate(216deg);
+  animation-delay: 750ms;
+}
+
+.apple-loading .segment:nth-child(8) {
+  transform: rotate(252deg);
+  animation-delay: 875ms;
+}
+
+.apple-loading .segment:nth-child(9) {
+  transform: rotate(288deg);
+  animation-delay: 1000ms;
+}
+
+.apple-loading .segment:nth-child(10) {
+  transform: rotate(324deg);
+  animation-delay: 1125ms;
+}
+
+/* .apple-loading .segment:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: 1250ms;
+}
+
+.apple-loading .segment:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 1375ms;
+} */
+
+/* Keyframes */
+@keyframes throbber {
+  0% {
+    background-color: #262626;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+.tox {
+  background-color: #121212;
 }

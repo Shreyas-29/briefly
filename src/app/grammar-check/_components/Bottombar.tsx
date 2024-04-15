@@ -1,14 +1,18 @@
 "use client";
 
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button';
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger
+} from "@/components/ui/tooltip";
 import { useInputLang, useInputText, useIsLoading, useOutputLang, useOutputText, useTransInputWordCount, useTransOutputWordCount } from '@/store';
 import axios from 'axios';
-import { Copy, Download, Loader2 } from 'lucide-react'
-import React, { useCallback, useEffect } from 'react'
-import { toast } from 'sonner';
-import { v4 as uuid } from "uuid";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import saveAs from "file-saver";
+import { Copy, Download, Loader2 } from 'lucide-react';
+import { useCallback, useEffect } from 'react';
+import { toast } from 'sonner';
 
 const Bottombar = () => {
 

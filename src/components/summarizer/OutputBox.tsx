@@ -1,14 +1,10 @@
 "use client";
 
 import { useInput, useLoading, useOutputWordCountStore, useSentenceCount } from '@/store';
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { Skeleton } from '../ui/skeleton';
 
-interface Props {
-
-}
-
-const OutputBox: React.FC<Props> = () => {
+const OutputBox = () => {
 
     const { summarizedText } = useInput();
 
