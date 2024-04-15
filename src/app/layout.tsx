@@ -56,4 +56,4 @@ export default function RootLayout({
             </html>
         </ClerkClientProvider>
     )
-}
+};
